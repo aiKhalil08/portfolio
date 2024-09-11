@@ -90,7 +90,7 @@ function Sidebar({toggleMode, animation, setAnimation, handleClose}: {toggleMode
                         <li><a href="#about-me" onClick={handleClose} className="text-body-2-all font-medium text-grey-light-600 dark:text-grey-dark-600 hover:text-grey-light-800 dark:hover:text-grey-dark-800">About</a></li>
                         <li><a href="#skills" onClick={handleClose} className="text-body-2-all font-medium text-grey-light-600 dark:text-grey-dark-600 hover:text-grey-light-800 dark:hover:text-grey-dark-800">Skills</a></li>
                         {/* <li><a href="#experience" onClick={handleClose} className="text-body-2-all font-medium text-grey-light-600 dark:text-grey-dark-600 hover:text-grey-light-800 dark:hover:text-grey-dark-800">Exprience</a></li> */}
-                        <li><a href="#projects" onClick={handleClose} className="text-body-2-all font-medium text-grey-light-600 dark:text-grey-dark-600 hover:text-grey-light-800 dark:hover:text-grey-dark-800">Projects</a></li>
+                        <li><a href="#work" onClick={handleClose} className="text-body-2-all font-medium text-grey-light-600 dark:text-grey-dark-600 hover:text-grey-light-800 dark:hover:text-grey-dark-800">Work</a></li>
                         {/* <li><a href="#testimonials" onClick={handleClose} className="text-body-2-all font-medium text-grey-light-600 dark:text-grey-dark-600 hover:text-grey-light-800 dark:hover:text-grey-dark-800">Testimonials</a></li> */}
                         <li><a href="#contact" onClick={handleClose} className="text-body-2-all font-medium text-grey-light-600 dark:text-grey-dark-600 hover:text-grey-light-800 dark:hover:text-grey-dark-800">Contact</a></li>
                     </ul>
