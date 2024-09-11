@@ -1,4 +1,4 @@
-import { Component, useContext, useState } from "react";
+import { useContext, useState } from "react";
 import { ModeContext } from "../../contexts/modeContext";
 import { Copy, Email, Telephone, Copied, Github, Twitter, LinkedIn } from "../Icons";
 import { MeContext } from "../../contexts/meContext";
@@ -9,25 +9,25 @@ export function Contact({}) {
     const me = useContext(MeContext) as Me;
 
     return (
-        <section id="contact" className="bg-grey-light-default px-28 py-24 flex flex-col gap-12 items-center">
+        <section id="contact" className="bg-grey-light-default dark:bg-grey-dark-default px-4 md:px-8 py-16 md:py-20 2xl:py-24 flex flex-col gap-12 items-center">
             <div className="self-center text-center flex flex-col gap-4">
-                <span className="rounded-xl bg-grey-light-200 px-5 py-1 text-body-3-all text-grey-light-600 self-center">Get in touch</span>
-                <p className="text-subtitle-all text-grey-light-600 max-w-[600px]">What’s next? Feel free to reach out to me if you're looking for a developer, have an inquiry, or simply want to connect.</p>
+                <span className="rounded-xl bg-grey-light-200 dark:bg-grey-dark-200 px-5 py-1 text-body-3-all text-grey-light-600 dark:text-grey-dark-600 self-center">Get in touch</span>
+                <p className="text-subtitle-tm md:text-subtitle-all text-grey-light-600 dark:text-grey-dark-600 max-w-[600px]">What’s next? Feel free to reach out to me if you're looking for a developer, have an inquiry, or simply want to connect.</p>
             </div>
             <div className="flex flex-col gap-4 items-center">
-                <div className="flex gap-5">
-                    <Email mode={mode} />
-                    <span className="text-heading-2-desktop font-semibold text-grey-light-900">{me.email}</span>
+                <div className="flex gap-5 items-center">
+                    <Email mode={mode} size={'24'} />
+                    <span className="text-heading-2-tm md:text-heading-2-desktop font-semibold text-grey-light-900 dark:text-grey-dark-900">{me.email}</span>
                     <CopyButton content={me.email} />
                 </div>
-                <div className="flex gap-5">
-                    <Telephone mode={mode} />
-                    <span className="text-heading-2-desktop font-semibold text-grey-light-900">{me.phoneNumber}</span>
+                <div className="flex gap-5 items-center">
+                    <Telephone mode={mode} size={'24'} />
+                    <span className="text-heading-2-tm md:text-heading-2-desktop font-semibold text-grey-light-900 dark:text-grey-dark-900">{me.phoneNumber}</span>
                     <CopyButton content={me.phoneNumber} />
                 </div>
             </div>
             <div className="flex flex-col gap-2 items-center">
-                <span className="text-body-2-all text-grey-light-600">You may also find me on these platforms!</span>
+                <span className="text-body-2-all text-grey-light-600 dark:text-grey-dark-600">You may also find me on these platforms!</span>
                 <div className="flex gap-1">
                     <a href={me.github} target="_blank" rel="noopener noreferrer">
                         <Github mode={mode} />
@@ -61,8 +61,8 @@ function CopyButton({content}: {content: string}) {
         <button type="button" onClick={() => copy(content)} >
             {
                 isCopied ?
-                <Copied mode={mode} /> :
-                <Copy mode={mode} />
+                <Copied mode={mode} size={'36'} /> :
+                <Copy mode={mode} size={'36'} />
             }
         </button>
     );

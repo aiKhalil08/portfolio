@@ -19,6 +19,45 @@ body {
     width: 100%;
 }
 
+.slide-in {
+    right: 0;
+    animation: slide-in .3s ease-out;
+}
+
+.slide-out {
+    right: -100;
+    animation: slide-out .3s ease-out;
+}
+
+@keyframes slide-in {
+    from {
+        right: -100%;
+    }
+    to {
+        right: 0;
+    }
+}
+
+@keyframes slide-out {
+    from {
+        right: 0;
+    }
+    to {
+        right: -100%;
+    }
+}
+
+@media (prefers-color-sheme: dark) {
+    *::-webkit-scrollbar {
+        color: black;
+        background-color: black;
+    }
+    * {
+        scrollbar-track-color: black;
+        scrollbar-color: black;
+    }
+}
+
 
 @keyframes wave {
     0% {
@@ -51,4 +90,64 @@ body {
     display: inline-block;
     animation: wave 2.5s 3;
     transform-origin: 70% 70%;
+  }
+
+  @keyframes magnify-pulse {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.5);
+    }
+  }
+  
+  .magnifying-glass {
+    display: inline-block;
+    animation: magnify-pulse 2s ease-in-out 3;
+  }
+
+
+
+
+  :root {
+    --scrollbar-track-color: #f1f1f1;
+    --scrollbar-thumb-color: #888;
+    --scrollbar-thumb-hover-color: #555;
+  }
+  
+  /* Theme-specific variables */
+  .light {
+    --scrollbar-track-color: #f1f1f1;
+    --scrollbar-thumb-color: #888;
+    --scrollbar-thumb-hover-color: #555;
+  }
+  
+  .dark {
+    --scrollbar-track-color: #333;
+    --scrollbar-thumb-color: #666;
+    --scrollbar-thumb-hover-color: #888;
+  }
+  
+  /* Webkit browsers (Chrome, Safari, newer versions of Edge) */
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: var(--scrollbar-track-color);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb-color);
+    border-radius: 6px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-thumb-hover-color);
+  }
+  
+  /* Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--scrollbar-thumb-color) var(--scrollbar-track-color);
   }
