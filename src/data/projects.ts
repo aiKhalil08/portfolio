@@ -12,14 +12,14 @@ export const projects: ProjectType[] = [
         title: 'MLA (Mitiget Learning Academy)',
         description: 'An e-learning platform for course browsing and registration, events registration, e-quiz and third party affiliate marketing. Incoorpoarates an audit system.',
         imageUrl: '/images/projects/mla.png',
-        technologies: ['Typescript', 'Angular', 'TailwindCSS', 'PHP', 'Laravel', 'MySQL', 'JWT'],
+        technologies: ['Typescript', 'Angular', 'TailwindCSS', 'PHP', 'Laravel', 'MySQL', 'JWT', 'RESTful API'],
         livePreview: 'https://mla.mitiget.com/',
     },
     {
         title: 'Telehealth',
         description: 'A platform for accessing health services online. Includes a feature that can help you find hospitals near you according to the selected search radius.',
         imageUrl: '/images/projects/telehealth.png',
-        technologies: ['Typescript', 'React', 'TailwindCSS', 'MapBox API', 'Geoapify'],
+        technologies: ['Typescript', 'React', 'TailwindCSS', 'MapBox API', 'Geoapify', 'RESTful API'],
         livePreview: 'https://telehealth-omega.vercel.app/',
         github: ['https://github.com/aiKhalil08/telehealth']
     },
@@ -27,7 +27,7 @@ export const projects: ProjectType[] = [
         title: 'Subssum',
         description: 'A telecommunications platform for purchasing data bundles, airtime, and electricity plans. You may create an account and login.',
         imageUrl: '/images/projects/subssum.png',
-        technologies: ['Javascript', 'React', 'TailwindCSS', 'Node.js', 'Express.js', 'MongoDB', 'Mongoose', 'JWT'],
+        technologies: ['Javascript', 'React', 'TailwindCSS', 'Node.js', 'Express.js', 'MongoDB', 'Mongoose', 'JWT', 'RESTful API'],
         livePreview: 'https://subssum-drab.vercel.app/',
         github: ['https://github.com/aiKhalil08/subssum', 'https://github.com/aiKhalil08/subssumapi']
     },
@@ -49,7 +49,7 @@ export const projects: ProjectType[] = [
         title: 'Bluefield Clinic',
         description: 'A clinic website incoorporating a patient management system, dianostics system and a prescription system.',
         imageUrl: '/images/projects/bluefield.png',
-        technologies: ['PHP', 'Javascript', 'CSS', 'Laravel', 'MySQL'],
+        technologies: ['PHP', 'Javascript', 'CSS', 'Laravel', 'MySQL', 'RESTful API'],
         github: ['https://github.com/aiKhalil08/bluefield']
     },
 ]
