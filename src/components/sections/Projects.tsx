@@ -6,9 +6,9 @@ import { projects, ProjectType } from "../../data/projects";
 export function Projects({}) {
     const mode = useContext(ModeContext);
     return (
-        <section id="projects" className="bg-grey-light-default dark:bg-grey-dark-default px-4 md:px-8 py-16 md:py-20 2xl:py-24 flex flex-col gap-6 md:gap-12">
+        <section id="work" className="bg-grey-light-default dark:bg-grey-dark-default px-4 md:px-8 py-16 md:py-20 2xl:py-24 flex flex-col gap-6 md:gap-12">
             <div className="self-center text-center flex flex-col gap-4">
-                <span className="rounded-xl bg-grey-light-200 dark:bg-grey-dark-200 px-5 py-1 text-body-3-all text-grey-light-600 dark:text-grey-dark-600 self-center">Projects</span>
+                <span className="rounded-xl bg-grey-light-200 dark:bg-grey-dark-200 px-5 py-1 text-body-3-all text-grey-light-600 dark:text-grey-dark-600 self-center">Work</span>
                 <p className="text-subtitle-tm md:text-subtitle-all text-grey-light-600 dark:text-grey-dark-600">Some of my noteworthy projects</p>
             </div>
             <div className="w-full max-w-7xl mx-auto">

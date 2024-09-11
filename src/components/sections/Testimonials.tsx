@@ -26,12 +26,24 @@ export function Testimonials({}) {
 }
 
 function Testimonial({testimonial}: {testimonial: TestimonialType}) {
+    const paragraphs = testimonial.message.split("\n");
+    console.log(paragraphs);
     return (
         <div className="bg-grey-light-default dark:bg-grey-dark-100 shadow-md rounded-xl p-12 flex flex-col gap-6 items-center mx-auto max-w-[500px] lg:max-w-96 h-full">
-            <img src={testimonial.imageUrl || '/images/testifiers/avatar.png'} alt={testimonial.name} className="w-16 h-16 rounded-full" />
-            <p className="text-body-2-all text-grey-light-600 dark:text-grey-dark-600">
-                "{testimonial.message}"
-            </p>
+            <img src={testimonial.imageUrl || '/images/testifiers/avatar.png'} alt={testimonial.name} className="w-16 h-16 rounded-full object-cover" />
+            <div  className="text-body-2-all text-grey-light-600 dark:text-grey-dark-600 space-y-4">
+                {
+                    paragraphs.map((paragraph, i) => {
+                        return (
+                            <p key={i}>
+                                {i === 0 && '"'}
+                                {paragraph.trim()}
+                                {i === paragraphs.length - 1 && '"'}
+                            </p>
+                        );
+                    })
+                }
+            </div>
             <div className="flex flex-col gap-1 items-center">
                 <span className="text-subtitle-all font-semibold text-grey-light-900 dark:text-grey-dark-900">{testimonial.name}</span>
                 <span className="text-body-3-all text-grey-light-600 dark:text-grey-dark-600">{testimonial.title}</span>
