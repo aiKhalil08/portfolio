@@ -7,6 +7,29 @@ import { Cancel, Hamburger, Logo } from "../Icons";
 export function Header({toggleMode}: {toggleMode: () => void}) {
     const mode = useContext(ModeContext);
     const [sidebarExpanded, setSidebarExpanded] = useState(false);
+
+    const [animation, setAnimation] = useState('');
+
+    function handleClose() {
+        // alert('handling close')
+        setAnimation('slide-out');
+        setTimeout(() => setSidebarExpanded(false), 250)
+    }
+
+    useEffect(() => {
+        let sidebarModal = document.querySelector('#sidebar-modal') as HTMLElement; 
+        let sidebar = document.querySelector('#sidebar') as HTMLElement;
+        function removeSidebar(e: MouseEvent) {
+            if (!sidebar.contains(e.target as Node)) handleClose();
+        }
+        if (sidebarExpanded) {
+            document.body.classList.add('non-scrollable');
+            sidebarModal.addEventListener('click', removeSidebar);
+        }
+        else document.body.classList.remove('non-scrollable');
+        return () => sidebarModal?.removeEventListener('click', removeSidebar);
+    }, [sidebarExpanded])
+
     return (
         <>
             <header className="bg-grey-light-default/70 dark:bg-grey-dark-default/70 shadow-sm shadow-black/5 dark:shadow-white/5 backdrop-blur-md p-4 md:px-8 md:py-4 sticky top-0 z-20">
@@ -14,7 +37,7 @@ export function Header({toggleMode}: {toggleMode: () => void}) {
                     <a href="#home">
                         <Logo mode={mode} />
                     </a>
-                    <button type="button" onClick={() => setSidebarExpanded(true)} className="rounded-lg hover:bg-grey-light-100 dark:hover:bg-grey-dark-100 p-[6px] transition-all ease-linear md:hidden">
+                    <button type="button" onClick={(e) => {e.stopPropagation(); setSidebarExpanded(true)}} className="rounded-lg hover:bg-grey-light-100 dark:hover:bg-grey-dark-100 p-[6px] transition-all ease-linear md:hidden">
                         <Hamburger mode={mode} />
                     </button>
                     <div className="hidden md:flex gap-6 items-center">
@@ -40,39 +63,30 @@ export function Header({toggleMode}: {toggleMode: () => void}) {
             </header>
             {
                 sidebarExpanded &&
-                <Sidebar close={() => setSidebarExpanded(false)} toggleMode={toggleMode} />
+                <Sidebar toggleMode={toggleMode} {...{setAnimation, animation, handleClose}} />
             }
         </>
     );
 }
 
-function Sidebar({close, toggleMode}: {close: () => void, toggleMode: () => void}) {
+function Sidebar({toggleMode, animation, setAnimation, handleClose}: {toggleMode: () => void, animation: string, setAnimation: (a: string) => void, handleClose: () => void}) {
     const mode = useContext(ModeContext);
-    const [animation, setAnimation] = useState('');
-    const fragment = document.location.hash;
 
     useEffect(() => {
         setAnimation('slide-in');
     }, []);
 
-    function handleClose() {
-        setAnimation('slide-out');
-        setTimeout(close, 250)
-    }
-
     return (
-        <div className="fixed top-0 left-0 h-full w-full z-30 bg-white/30 backdrop-blur-sm">
-            <div className={`${animation} absolute top-0 -right-full h-full w-80 bg-grey-light-default dark:bg-grey-dark-default z-40`}>
+        <div id="sidebar-modal" className="fixed top-0 left-0 h-full w-full z-30 bg-black/10 dark:bg-white/10 backdrop-blur-sm">
+            <div id="sidebar" className={`${animation} absolute top-0 -right-full h-full w-80 bg-grey-light-default dark:bg-grey-dark-default z-40`}>
                 <header className="p-4 border-b border-b-grey-light-100 dark:border-b-grey-dark-100 md:px-28 md:py-4 sticky top-0 z-20 flex justify-between items-center ">
-                    <a href="#home">
-                        <Logo mode={mode} />
-                    </a>
-                    <button type="button" onClick={handleClose} className="rounded-lg hover:bg-grey-light-100 dark:hover:bg-grey-dark-100 p-[6px] transition-all ease-linear md:hidden">
+                    <Logo mode={mode} />
+                    <button type="button" onClick={(e) => {e.stopPropagation(); handleClose();}} className="rounded-lg hover:bg-grey-light-100 dark:hover:bg-grey-dark-100 p-[6px] transition-all ease-linear md:hidden">
                         <Cancel mode={mode} />
                     </button>
                 </header>
                 <nav>
-                    <ul className="p-4 flex flex-col gap-4 border-b">
+                    <ul className="p-4 flex flex-col gap-4 border-b border-b-grey-light-100 dark:border-b-grey-dark-100">
                         <li><a href="#about-me" onClick={handleClose} className="text-body-2-all font-medium text-grey-light-600 dark:text-grey-dark-600 hover:text-grey-light-800 dark:hover:text-grey-dark-800">About</a></li>
                         <li><a href="#skills" onClick={handleClose} className="text-body-2-all font-medium text-grey-light-600 dark:text-grey-dark-600 hover:text-grey-light-800 dark:hover:text-grey-dark-800">Skills</a></li>
                         {/* <li><a href="#experience" onClick={handleClose} className="text-body-2-all font-medium text-grey-light-600 dark:text-grey-dark-600 hover:text-grey-light-800 dark:hover:text-grey-dark-800">Exprience</a></li> */}

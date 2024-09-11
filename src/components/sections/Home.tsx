@@ -50,7 +50,7 @@ export function Home({}) {
                             <span>{me.state}, {me.country}</span>
                         </div>
                         <div className="flex gap-2">
-                            <img src={onlineIcon} alt="" />
+                            <img src={onlineIcon} alt="" className="animate-pulse" />
                             <span>Available for work</span>
                         </div>
                     </div>

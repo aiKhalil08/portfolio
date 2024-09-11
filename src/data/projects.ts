@@ -17,7 +17,7 @@ export const projects: ProjectType[] = [
     },
     {
         title: 'Telehealth',
-        description: 'A platform for accessing health services online. Includes a feature that can help you find hospitals near you.',
+        description: 'A platform for accessing health services online. Includes a feature that can help you find hospitals near you according to the selected search radius.',
         imageUrl: '/images/projects/telehealth.png',
         technologies: ['Typescript', 'React', 'TailwindCSS', 'MapBox', 'Geoapify'],
         livePreview: 'https://telehealth-omega.vercel.app/',
@@ -25,7 +25,7 @@ export const projects: ProjectType[] = [
     },
     {
         title: 'Subssum',
-        description: 'A telecommunications platform for purchasing data bundles, airtime, and electricity plans.',
+        description: 'A telecommunications platform for purchasing data bundles, airtime, and electricity plans. You may create an account an login.',
         imageUrl: '/images/projects/subssum.png',
         technologies: ['Javascript', 'React', 'TailwindCSS', 'Node.js', 'Express.js', 'MongoDB', 'Mongoose', 'JWT'],
         livePreview: 'https://subssum-drab.vercel.app/',
@@ -33,7 +33,7 @@ export const projects: ProjectType[] = [
     },
     {
         title: 'Events Registration',
-        description: 'An events creation and registration plaform',
+        description: 'An events creation and registration plaform. Contains an event creation section where you input the event details and copy the registration link. The links directs users to the event registration form.',
         imageUrl: '/images/projects/events.png',
         technologies: ['PHP', 'TailwindCSS', 'MySQL'],
         livePreview: 'https://event.mitiget.com/register.php?e=Tech%20Skills%20with%20Global%20Relevance:%20Earning%20in%20Foreign%20Currency',
