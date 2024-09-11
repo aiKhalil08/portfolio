@@ -19,13 +19,13 @@ export const projects: ProjectType[] = [
         title: 'Telehealth',
         description: 'A platform for accessing health services online. Includes a feature that can help you find hospitals near you according to the selected search radius.',
         imageUrl: '/images/projects/telehealth.png',
-        technologies: ['Typescript', 'React', 'TailwindCSS', 'MapBox', 'Geoapify'],
+        technologies: ['Typescript', 'React', 'TailwindCSS', 'MapBox API', 'Geoapify'],
         livePreview: 'https://telehealth-omega.vercel.app/',
         github: ['https://github.com/aiKhalil08/telehealth']
     },
     {
         title: 'Subssum',
-        description: 'A telecommunications platform for purchasing data bundles, airtime, and electricity plans. You may create an account an login.',
+        description: 'A telecommunications platform for purchasing data bundles, airtime, and electricity plans. You may create an account and login.',
         imageUrl: '/images/projects/subssum.png',
         technologies: ['Javascript', 'React', 'TailwindCSS', 'Node.js', 'Express.js', 'MongoDB', 'Mongoose', 'JWT'],
         livePreview: 'https://subssum-drab.vercel.app/',

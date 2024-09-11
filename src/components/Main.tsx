@@ -14,7 +14,11 @@ import { Me } from "../types";
 import { MeContext } from "../contexts/meContext";
 
 const Main: FC = () => {
-    const [mode, setMode] = useState<'dark' | 'light'>(window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    let initialMode = localStorage.getItem('mode') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+
+    if (initialMode !== 'light' && initialMode !== 'dark') initialMode = 'light';
+
+    const [mode, setMode] = useState<'dark' | 'light'>(initialMode as 'dark' | 'light');
 
     useEffect(() => {
         const fragment = document.location.hash;
@@ -33,6 +37,11 @@ const Main: FC = () => {
         }
     }, [mode])
 
+    function toggleMode() {
+        let newMode: 'dark' | 'light' = mode === 'dark' ? 'light' : 'dark';
+        localStorage.setItem('mode', newMode);
+        setMode(newMode);
+    }
     const me: Me = {
         firstName: 'Ibrahim',
         state: 'Lagos',
@@ -48,7 +57,7 @@ const Main: FC = () => {
         <ModeContext.Provider value={mode}>
         <MeContext.Provider value={me}>
             <main className={`${mode === 'dark' ? 'bg-grey-dark-default dark' : 'bg-grey-light-default'}`}>
-                <Header toggleMode={() => {setMode(mode === 'dark' ? 'light' : 'dark')}} />
+                <Header toggleMode={toggleMode} />
                 <Home />
                 <About />
                 <Skills />

@@ -11,7 +11,7 @@ export function Testimonials({}) {
                 <p className="text-subtitle-tm md:text-subtitle-all text-grey-light-600 dark:text-grey-dark-600">What poeple have said about me</p>
             </div>
             <div className="w-full max-w-7xl mx-auto">
-                <ul className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-12">
+                <ul className="flex flex-wrap justify-center gap-6 md:gap-12 mx-auto">
                     {
                         testimonials.map(testimonial => {
                             return <li key={testimonial.name}>
@@ -27,7 +27,7 @@ export function Testimonials({}) {
 
 function Testimonial({testimonial}: {testimonial: TestimonialType}) {
     return (
-        <div className="bg-grey-light-default dark:bg-grey-dark-100 shadow-md rounded-xl p-12 flex flex-col gap-6 items-center mx-auto max-w-[500px] h-full">
+        <div className="bg-grey-light-default dark:bg-grey-dark-100 shadow-md rounded-xl p-12 flex flex-col gap-6 items-center mx-auto max-w-[500px] lg:max-w-96 h-full">
             <img src={testimonial.imageUrl || '/images/testifiers/avatar.png'} alt={testimonial.name} className="w-16 h-16 rounded-full" />
             <p className="text-body-2-all text-grey-light-600 dark:text-grey-dark-600">
                 "{testimonial.message}"

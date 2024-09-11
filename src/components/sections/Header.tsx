@@ -78,7 +78,7 @@ function Sidebar({toggleMode, animation, setAnimation, handleClose}: {toggleMode
 
     return (
         <div id="sidebar-modal" className="fixed top-0 left-0 h-full w-full z-30 bg-black/10 dark:bg-white/10 backdrop-blur-sm">
-            <div id="sidebar" className={`${animation} absolute top-0 -right-full h-full w-80 bg-grey-light-default dark:bg-grey-dark-default z-40`}>
+            <div id="sidebar" className={`${animation} absolute top-0 right-0 translate-x-full h-full w-80 bg-grey-light-default dark:bg-grey-dark-default z-40`}>
                 <header className="p-4 border-b border-b-grey-light-100 dark:border-b-grey-dark-100 md:px-28 md:py-4 sticky top-0 z-20 flex justify-between items-center ">
                     <Logo mode={mode} />
                     <button type="button" onClick={(e) => {e.stopPropagation(); handleClose();}} className="rounded-lg hover:bg-grey-light-100 dark:hover:bg-grey-dark-100 p-[6px] transition-all ease-linear md:hidden">
