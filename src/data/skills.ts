@@ -8,6 +8,7 @@ export const skills: SkillType[] = [
     {name: 'SQL', imageUrl: '/images/skills/icon-sql.png'},
     {name: 'Angular', imageUrl: '/images/skills/icon-angular.png'},
     {name: 'React', imageUrl: '/images/skills/icon-react.png'},
+    {name: 'Next.js', imageUrl: '/images/skills/icon-nextjs.png'},
     {name: 'Laravel', imageUrl: '/images/skills/icon-laravel.png'},
     {name: 'Node.js', imageUrl: '/images/skills/icon-nodejs.png'},
     {name: 'Express.js', imageUrl: '/images/skills/icon-express.png'},

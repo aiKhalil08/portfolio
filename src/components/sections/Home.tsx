@@ -41,7 +41,7 @@ export function Home({}) {
                     <div className="flex flex-col gap-2">
                         <h2 className="text-heading-1-mobile font-semibold md:text-heading-1-desktop md:font-bold text-grey-light-900 dark:text-grey-dark-900">Hi, I’m {me.firstName} <span ref={iconRef} className="inline-block">👋</span></h2>
                         <p className="text-body-2-all text-grey-light-600 dark:text-grey-dark-600">
-                            I'm a full-stack web developer with 5+ years of experience in building diverse web applications, from e-learning platforms to audit and GRC systems. I specialize in both frontend and backend technologies, working with JavaScript, Typescript, PHP, Python, Laravel, Angular, React, Node.js, and Django, among others. I am skilled in databases like MySQL, PostgreSQL, and MongoDB, and tools like Git, Docker, and AWS. I’m passionate about delivering fast, responsive, and visually appealing digital solutions.
+                            I'm a full-stack web developer with 5+ years of experience in building diverse web applications, from e-learning platforms to audit and GRC systems. I specialize in both frontend and backend technologies, working with JavaScript, Typescript, PHP, Python, Laravel, Angular, React, Next.js, Node.js, and Django, among others. I am skilled in databases like MySQL, PostgreSQL, and MongoDB, and tools like Git, Docker, and AWS. I’m passionate about delivering fast, responsive, and visually appealing digital solutions.
                         </p>
                     </div>
                     <div className="space-y-2 text-body-2-all text-grey-light-600 dark:text-grey-dark-600">
