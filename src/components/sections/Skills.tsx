@@ -32,9 +32,9 @@ function Skill({skill}: {skill: SkillType}) {
     return (
         <div className="group flex flex-col gap-1 items-center cursor-pointer">
             <div className="w-[70px] h-[70px] grid place-items-center">
-                <img src={skill.imageUrl} className={`w-16 h-16 md:group-hover:w-[70px] md:group-hover:h-[70px] transition-all duration-200 ease-linear object-contain ${skill.name === 'Express.js' && mode === 'dark' ? 'invert' : ''}`} alt="" />
+                <img src={skill.imageUrl} className={`w-16 h-16 md:group-hover:w-[70px] md:group-hover:h-[70px] transition-all duration-200 ease-linear object-contain ${['Express.js', 'Expo'].includes(skill.name) && mode === 'dark' ? 'invert' : ''}`} alt="" />
             </div>
-            <span className="text-body-1-all text-grey-light-600 dark:text-grey-dark-600">{skill.name}</span>
+            <span className="text-body-1-all text-sm text-grey-light-600 dark:text-grey-dark-600">{skill.name}</span>
         </div>
     );
 }
