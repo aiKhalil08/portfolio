@@ -39,7 +39,7 @@ export function About({}) {
                     </h3>
                     <div className="space-y-4 text-grey-light-600 dark:text-grey-dark-600 text-body-2-all">
                         <p>
-                            I am a dedicated full-stack web developer with over 5 years of coding experience. My passion lies in creating exceptional digital experiences that are fast, accessible, visually appealing, and responsive.
+                            I am a dedicated full-stack web and mobile developer with over 5 years of coding experience. My passion lies in creating exceptional digital experiences that are fast, accessible, visually appealing, and responsive.
                         </p>
                         <p>
                             Throughout my career, I have specialized in both frontend and backend system implementation, developing a wide range of web applications including a telehealth website, e-learning platforms, GRC systems, telecommunications website, audit systems, quiz systems, affiliate marketing systems, 2-D platform games, school portals, and clinic websites.
@@ -48,7 +48,7 @@ export function About({}) {
                             My technical expertise spans a diverse array of languages, frameworks, and technologies. This includes proficiency in JavaScript, TypeScript, PHP, SQL, and Python, as well as experience working with frameworks and libraries such as Laravel, Angular, React & React Native, Next.js, Expo, Node.js, Express.js, Django, TailwindCSS, and Bootstrap. I'm also skilled in working with databases like MySQL, PostgreSQL, and MongoDB, and I'm adept at using tools and technologies like Git, GitHub, Docker, and AWS.
                         </p>
                         <p>
-                            Despite my extensive experience, I approach every project with the same enthusiasm and dedication as if it were entirely new, always aiming to support forward-thinking development teams by delivering innovative web solutions tailored to their clients' needs. Whether working on the frontend or backend, my focus is on leveraging my full-stack expertise to create standout digital experiences, and I take pride in pushing the boundaries of what's possible in web development.
+                            Despite my extensive experience, I approach every project with the same enthusiasm and dedication as if it were entirely new, always aiming to support forward-thinking development teams by delivering innovative web solutions tailored to their clients' needs. Whether working on the frontend or backend, my focus is on leveraging my full-stack expertise to create standout digital experiences, and I take pride in pushing the boundaries of what's possible in software development.
                         </p>
                         <h4 className="text-subtitle-all font-medium text-grey-light-900 dark:text-grey-dark-900">Some more personal stuff:</h4>
                         <ul className="list-disc list-inside">
