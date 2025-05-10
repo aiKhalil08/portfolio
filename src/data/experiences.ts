@@ -9,11 +9,23 @@ export type WorkExperienceType = {
 
 export const experiences: WorkExperienceType[] = [
     {
+        companyName: 'Optimus Bank Limited',
+        companyLogo: '/images/companies/optimus-logo.jpeg',
+        role: 'Mobile Developer (React Native)',
+        startDate: 'January, 2025',
+        endDate: 'Present',
+        points: [
+            'Worked on the development, refactoring and maintenance of the bank\'s mobile application.',
+            'Implemented key features including third-party ATM card collection, insurance purchase, and scheduled transactions.',
+            'Integrated international payment capabilities, enhancing the app’s cross-border functionality.',
+        ]
+    },
+    {
         companyName: 'Mitiget Assurance and Technology Services Limited',
         companyLogo: '/images/companies/mitiget-logo.jpeg',
         role: 'Full Stack Developer',
         startDate: 'January, 2024',
-        endDate: 'Present',
+        endDate: 'January, 2025',
         points: [
             'Developed an e-learning platform (Mitiget Learning Academy) using Angular (frontend) and Laravel (backend) with MySQL database, featuring a course registration system, a quiz system, an audit system, and affiliate marketing functionality.',
             'Created an events management and registration website using vanilla PHP.',

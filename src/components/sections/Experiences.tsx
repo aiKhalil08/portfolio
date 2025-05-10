@@ -48,7 +48,7 @@ function WorkExperience({experience}: {experience: WorkExperienceType}) {
                     }
                 </ul>
             </div>
-            <span className="order-2 md:order-3 self-start text-body-2-all text-grey-light-700 dark:text-grey-dark-700 flex-1">{experience.startDate} - {experience.endDate}</span>
+            <span className="order-2 md:order-3 self-start text-body-3-all text-grey-light-700 dark:text-grey-dark-700 flex-1">{experience.startDate} - {experience.endDate}</span>
         </div>
     );
 }

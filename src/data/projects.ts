@@ -9,6 +9,20 @@ export type ProjectType = {
 
 export const projects: ProjectType[] = [
     {
+        title: 'Optiverse (Optimus Bank)',
+        description: 'A banking application designed for seamless domestic and international transfers and payments, featuring an intuitive, user-friendly interface for effortless navigation.',
+        imageUrl: '/images/projects/optiverse.png',
+        technologies: ['Typescript', 'React Native', 'Redux', 'Redux Thunk', 'Context API', 'NativeWind', 'RESTful API'],
+        livePreview: 'https://play.google.com/store/apps/details?id=com.optiversev2&hl=en_US',
+    },
+    {
+        title: 'M-Clarion',
+        description: 'A GRC system that helps organizations manage their employees record, control access to resources, track risks, goals and objectives.',
+        imageUrl: '/images/projects/mclarion.png',
+        technologies: ['Typescript', 'React', 'React Query', 'Context API', 'TailwindCSS', 'JWT', 'RESTful API'],
+        livePreview: 'https://mitiget.com/',
+    },
+    {
         title: 'MLA (Mitiget Learning Academy)',
         description: 'An e-learning platform for course browsing and registration, events registration, e-quiz and third party affiliate marketing. Incoorpoarates an audit system.',
         imageUrl: '/images/projects/mla.png',
