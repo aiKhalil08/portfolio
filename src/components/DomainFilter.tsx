@@ -1,6 +1,4 @@
-import { useContext } from 'react';
 import { Domain } from '../types';
-import { ModeContext } from '../contexts/modeContext';
 
 type DomainFilterProps = {
     activeDomain: Domain | 'all';
@@ -15,8 +13,6 @@ const tabs: { key: Domain | 'all'; label: string }[] = [
 ];
 
 export function DomainFilter({ activeDomain, onDomainChange }: DomainFilterProps) {
-    const mode = useContext(ModeContext);
-
     return (
         <div className="flex gap-2 flex-wrap justify-center">
             {tabs.map(tab => {

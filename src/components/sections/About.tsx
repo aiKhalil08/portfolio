@@ -1,8 +1,6 @@
-import { useContext, useEffect, useRef } from "react";
-import { ModeContext } from "../../contexts/modeContext";
+import { useEffect, useRef } from "react";
 
 export function About() {
-    const mode = useContext(ModeContext);
     const iconRef = useRef<HTMLElement | null>(null);
     const sectionRef = useRef<HTMLElement | null>(null);
 

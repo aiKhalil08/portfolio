@@ -74,7 +74,7 @@ function Sidebar({toggleMode, animation, setAnimation, handleClose}: {toggleMode
 
     useEffect(() => {
         setAnimation('slide-in');
-    }, []);
+    }, [setAnimation]);
 
     return (
         <div id="sidebar-modal" className="fixed top-0 left-0 h-full w-full z-30 bg-black/10 dark:bg-white/10 backdrop-blur-sm">
