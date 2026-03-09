@@ -1,7 +1,7 @@
 import { useContext, useEffect, useRef } from "react";
 import { ModeContext } from "../../contexts/modeContext";
 
-export function About({}) {
+export function About() {
     const mode = useContext(ModeContext);
     const iconRef = useRef<HTMLElement | null>(null);
     const sectionRef = useRef<HTMLElement | null>(null);
@@ -20,7 +20,8 @@ export function About({}) {
             }, {threshold: 0});
             oberserver.observe(sectionRef.current as HTMLElement)
         }
-    }, [sectionRef.current]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
     return (
         <section ref={sectionRef} id="about-me" className="bg-grey-light-50 dark:bg-grey-dark-50 px-4 md:px-8 py-16 md:py-20 2xl:py-24 flex flex-col gap-6 md:gap-12">

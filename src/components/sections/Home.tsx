@@ -5,7 +5,7 @@ import { ModeContext } from "../../contexts/modeContext";
 import { MeContext } from "../../contexts/meContext";
 import { Me } from "../../types";
 
-export function Home({}) {
+export function Home() {
     const mode = useContext(ModeContext);
     const me = useContext(MeContext) as Me;
 
@@ -26,7 +26,8 @@ export function Home({}) {
             }, {threshold: 0});
             oberserver.observe(sectionRef.current as HTMLElement)
         }
-    }, [sectionRef.current]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
     return (
         <section ref={sectionRef} id="home" className="bg-grey-light-default dark:bg-grey-dark-default px-4 md:px-8 py-16 md:py-20 2xl:py-24">
@@ -55,13 +56,13 @@ export function Home({}) {
                         </div>
                     </div>
                     <div className="flex gap-1">
-                        <a target="_blank" href={me.github}>
+                        <a target="_blank" rel="noreferrer" href={me.github}>
                             <Github mode={mode} />
                         </a>
-                        <a target="_blank" href={me.twitter}>
+                        <a target="_blank" rel="noreferrer" href={me.twitter}>
                             <Twitter mode={mode} />
                         </a>
-                        <a target="_blank" href={me.linkedin}>
+                        <a target="_blank" rel="noreferrer" href={me.linkedin}>
                             <LinkedIn mode={mode} />
                         </a>
                     </div>

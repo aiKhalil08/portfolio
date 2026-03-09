@@ -1,9 +1,6 @@
-import { useContext } from "react";
-import { ModeContext } from "../../contexts/modeContext";
 import { testimonials, TestimonialType } from "../../data/testimonials";
 
-export function Testimonials({}) {
-    const mode = useContext(ModeContext);
+export function Testimonials() {
     return (
         <section id="testimonials" className="bg-grey-light-50 dark:bg-grey-dark-50 px-4 md:px-8 py-16 md:py-20 2xl:py-24 flex flex-col gap-6 md:gap-12">
             <div className="self-center text-center flex flex-col gap-4">

@@ -4,7 +4,7 @@ import { Copy, Email, Telephone, Copied, Github, Twitter, LinkedIn } from "../Ic
 import { MeContext } from "../../contexts/meContext";
 import { Me } from "../../types";
 
-export function Contact({}) {
+export function Contact() {
     const mode = useContext(ModeContext);
     const me = useContext(MeContext) as Me;
 

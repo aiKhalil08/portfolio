@@ -20,7 +20,7 @@ const domainColors: Record<Domain, string> = {
     backend: 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-300',
 };
 
-export function Projects({}) {
+export function Projects() {
     const [activeDomain, setActiveDomain] = useState<Domain | 'all'>('all');
 
     const filtered = filterByDomain(projects, activeDomain);

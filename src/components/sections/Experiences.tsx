@@ -7,7 +7,7 @@ const domainColors: Record<Domain, string> = {
     backend: 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-300',
 };
 
-export function Experiences({}) {
+export function Experiences() {
     return (
         <section id="experience" className="bg-grey-light-50 dark:bg-grey-dark-50 px-4 md:px-8 py-16 md:py-20 2xl:py-24 flex flex-col gap-6 md:gap-12">
             <div className="self-center text-center flex flex-col gap-4">

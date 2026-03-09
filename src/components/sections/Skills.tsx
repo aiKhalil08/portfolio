@@ -23,7 +23,7 @@ function groupByCategory(items: SkillType[]): Record<SkillCategory, SkillType[]>
     return groups;
 }
 
-export function Skills({}) {
+export function Skills() {
     const [activeDomain, setActiveDomain] = useState<Domain | 'all'>('all');
 
     const filtered = filterByDomain(skills, activeDomain);
