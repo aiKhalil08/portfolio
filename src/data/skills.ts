@@ -32,7 +32,6 @@ export const skills: SkillType[] = [
     {name: 'Express.js', imageUrl: '/images/skills/icon-express.png', category: 'framework', domains: ['backend'], invertInDark: true},
     {name: 'Django', imageUrl: '/images/skills/icon-django.png', category: 'framework', domains: ['backend']},
     {name: 'Redux', imageUrl: '/images/skills/icon-redux.png', category: 'framework', domains: ['mobile', 'frontend']},
-    {name: 'NativeWind', imageUrl: '/images/skills/icon-nativewind.png', category: 'framework', domains: ['mobile']},
     {name: 'TailwindCSS', imageUrl: '/images/skills/icon-tailwindcss.png', category: 'framework', domains: ['frontend']},
     {name: 'Bootstrap', imageUrl: '/images/skills/icon-bootstrap.png', category: 'framework', domains: ['frontend']},
 
@@ -50,7 +49,7 @@ export const skills: SkillType[] = [
     {name: 'AWS', imageUrl: '/images/skills/icon-aws.png', category: 'tool', domains: ['backend']},
     {name: 'Firebase', imageUrl: '/images/skills/icon-firebase.png', category: 'tool', domains: ['mobile', 'backend']},
     {name: 'Supabase', imageUrl: '/images/skills/icon-supabase.png', category: 'tool', domains: ['frontend', 'backend']},
-    {name: 'Stripe', imageUrl: '/images/skills/icon-stripe.png', category: 'tool', domains: ['backend']},
+    {name: 'Stripe', imageUrl: '/images/skills/icon-stripe.png', category: 'tool', domains: ['backend'], invertInDark: true},
     {name: 'Paystack', imageUrl: '/images/skills/icon-paystack.png', category: 'tool', domains: ['backend']},
     {name: 'Yoco', imageUrl: '/images/skills/icon-yoco.png', category: 'tool', domains: ['backend']},
 

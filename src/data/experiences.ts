@@ -29,7 +29,7 @@ export const experiences: WorkExperienceType[] = [
     },
     {
         companyName: 'Freelance',
-        companyLogo: '/images/companies/freelance-logo.png',
+        companyLogo: '/images/companies/freelance-logo.jpeg',
         role: 'Full-Stack Developer',
         startDate: '2025',
         endDate: 'Present',
