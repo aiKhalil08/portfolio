@@ -39,25 +39,25 @@ export function About({}) {
                     </h3>
                     <div className="space-y-4 text-grey-light-600 dark:text-grey-dark-600 text-body-2-all">
                         <p>
-                            I am a dedicated full-stack web and mobile developer with over 5 years of coding experience. My passion lies in creating exceptional digital experiences that are fast, accessible, visually appealing, and responsive.
+                            I am a dedicated full-stack software developer with over 7 years of coding experience. My passion lies in creating exceptional digital experiences that are fast, accessible, visually appealing, and responsive — across mobile, web, and backend systems.
                         </p>
                         <p>
-                            Throughout my career, I have specialized in both frontend and backend system implementation, developing a wide range of web applications including a telehealth website, e-learning platforms, GRC systems, telecommunications website, audit systems, quiz systems, affiliate marketing systems, 2-D platform games, school portals, and clinic websites.
+                            Throughout my career, I have delivered a wide range of products including banking platforms, AI-powered chatbots, health tracking apps, e-learning platforms, GRC systems, salon booking ecosystems, real-time multiplayer games, crypto analytics dashboards, and payment integrations.
                         </p>
                         <p>
-                            My technical expertise spans a diverse array of languages, frameworks, and technologies. This includes proficiency in JavaScript, TypeScript, PHP, SQL, and Python, as well as experience working with frameworks and libraries such as Laravel, Angular, React & React Native, Next.js, Expo, Node.js, Express.js, Django, TailwindCSS, and Bootstrap. I'm also skilled in working with databases like MySQL, PostgreSQL, and MongoDB, and I'm adept at using tools and technologies like Git, GitHub, Docker, and AWS.
+                            My technical expertise spans languages like JavaScript, TypeScript, PHP, Kotlin, Python, C#, and C. I work with frameworks such as React, React Native, Expo, Angular, Next.js, .Net, Laravel, Node.js, Nest.js, Express.js, and Django. I'm skilled in databases including MySQL, PostgreSQL, MsSQL, MongoDB, SQLite, and Redis, and experienced with tools like Git, Docker, AWS, Firebase, Supabase, and payment platforms like Stripe, Paystack, and Yoco.
                         </p>
                         <p>
-                            Despite my extensive experience, I approach every project with the same enthusiasm and dedication as if it were entirely new, always aiming to support forward-thinking development teams by delivering innovative web solutions tailored to their clients' needs. Whether working on the frontend or backend, my focus is on leveraging my full-stack expertise to create standout digital experiences, and I take pride in pushing the boundaries of what's possible in software development.
+                            I approach every project with the same enthusiasm and dedication, always aiming to deliver innovative solutions tailored to clients' needs. Whether building mobile apps, crafting web frontends, or architecting backend systems, my focus is on creating standout digital experiences that drive real business value.
                         </p>
                         <h4 className="text-subtitle-all font-medium text-grey-light-900 dark:text-grey-dark-900">Some more personal stuff:</h4>
                         <ul className="list-disc list-inside">
                             <li>On a normal day I code 8 - 10 hours</li>
                             <li>On a good day I code 12+ hours</li>
                             <li>When I am not coding, I am reading Maths or CS books</li>
-                            <li>But wait, my life is not entirely boring. I watch Chelsea F.C. when they play 😁💙</li>
-                            <li>In the few minutes before I fall asleep I read novels. I am presently reading Treasure Island</li>
-                            <li>And as you might have guessed: I AM OBSESSED WITH SPACE! 🛰️</li>
+                            <li>But hey! My life is not entirely boring. I watch Chelsea F.C. when they play 😁💙</li>
+                            <li>In the few minutes before I fall asleep I read novels. I am presently reading Foundation</li>
+                            <li>And, as you might have guessed: I AM OBSESSED WITH SPACE! 🛰️</li>
                         </ul>
                     </div>
                 </article>

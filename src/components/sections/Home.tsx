@@ -32,7 +32,7 @@ export function Home({}) {
         <section ref={sectionRef} id="home" className="bg-grey-light-default dark:bg-grey-dark-default px-4 md:px-8 py-16 md:py-20 2xl:py-24">
             <div className="w-full max-w-7xl mx-auto flex flex-col md:flex-row gap-12 md:justify-between">
                 <div className="relative self-center md:self-start md:order-last shrink-0 w-[280px] md:w-80 h-[300px] md:h-[360px]">
-                    <div className="absolute bottom-0 md:right-0 w-[280px] h-[280px] md:h-80 bg-grey-light-200 dark:bg-grey-dark-200 border-8 border-grey-light-default dark:border-grey-dark-default"></div>
+                    <div className="absolute bottom-0 md:right-0 w-[280px] h-[280px] md:h-80 bg-emerald-500/10 dark:bg-emerald-500/10 border-8 border-grey-light-default dark:border-grey-dark-default"></div>
                     <div className="absolute z-[1] top-0 left-5 md:left-0 w-[240px] md:w-[280px] h-[280px] md:h-80 border-8 border-grey-light-default dark:border-grey-dark-default">
                         <img src="/coding-astronaut.webp" className="object-cover w-full h-full" alt="" />
                     </div>
@@ -41,7 +41,7 @@ export function Home({}) {
                     <div className="flex flex-col gap-2">
                         <h2 className="text-heading-1-mobile font-semibold md:text-heading-1-desktop md:font-bold text-grey-light-900 dark:text-grey-dark-900">Hi, I’m {me.firstName} <span ref={iconRef} className="inline-block">👋</span></h2>
                         <p className="text-body-2-all text-grey-light-600 dark:text-grey-dark-600">
-                            I'm a Full-stack Software Developer with 6 years of experience building a wide range of web and mobile applications, including banking platforms, e-learning systems, and GRC/audit tools. I specialize in both frontend and backend development, working with languages such as JavaScript, TypeScript, PHP, and Python, and frameworks like Laravel, Angular, React, React Native, Next.js, Expo, Node.js, and Django. I'm proficient in database technologies including MySQL, PostgreSQL, MsSQL, and MongoDB, and experienced with tools like Git, Docker, and AWS. I’m passionate about creating fast, responsive, and visually engaging digital solutions.
+                            I’m a Full-Stack Software Developer with 7 years of coding experience building robust mobile and web solutions, with a focus on financial services, health tech, education, and compliance systems. I’ve successfully delivered mission-critical applications including banking platforms, AI-powered chatbots, comprehensive e-learning solutions, and enterprise GRC systems. I work across the full stack — from React Native and Expo mobile apps to React, Angular, and Next.js frontends, and Node.js, Nest.js, .Net, Laravel, and Django backends. I’m passionate about leveraging emerging technologies to create innovative digital experiences that drive business growth.
                         </p>
                     </div>
                     <div className="space-y-2 text-body-2-all text-grey-light-600 dark:text-grey-dark-600">

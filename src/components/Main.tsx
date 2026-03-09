@@ -59,17 +59,27 @@ const Main: FC = () => {
             <main className={`${mode === 'dark' ? 'bg-grey-dark-default dark' : 'bg-grey-light-default'}`}>
                 <Header toggleMode={toggleMode} />
                 <Home />
+                <Divider />
                 <About />
+                <Divider />
                 <Skills />
+                <Divider />
                 <Experiences />
+                <Divider />
                 <Projects />
+                <Divider />
                 <Testimonials />
+                <Divider />
                 <Contact />
                 <Footer />
             </main>
         </MeContext.Provider>
         </ModeContext.Provider>
     )
+}
+
+function Divider() {
+    return <div className="h-px bg-gradient-to-r from-transparent via-grey-light-200 dark:via-grey-dark-200 to-transparent" />;
 }
 
 export default Main

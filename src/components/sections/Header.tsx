@@ -3,6 +3,8 @@ import { ModeContext } from "../../contexts/modeContext";
 import sunIcon from '../../assets/icons/sun.svg';
 import moonIcon from '../../assets/icons/moon.svg';
 import { Cancel, Hamburger, Logo } from "../Icons";
+import { ResumeDropdown } from "../ResumeDropdown";
+import { resumes } from "../../data/resumes";
 
 export function Header({toggleMode}: {toggleMode: () => void}) {
     const mode = useContext(ModeContext);
@@ -11,13 +13,12 @@ export function Header({toggleMode}: {toggleMode: () => void}) {
     const [animation, setAnimation] = useState('');
 
     function handleClose() {
-        // alert('handling close')
         setAnimation('slide-out');
         setTimeout(() => setSidebarExpanded(false), 250)
     }
 
     useEffect(() => {
-        let sidebarModal = document.querySelector('#sidebar-modal') as HTMLElement; 
+        let sidebarModal = document.querySelector('#sidebar-modal') as HTMLElement;
         let sidebar = document.querySelector('#sidebar') as HTMLElement;
         function removeSidebar(e: MouseEvent) {
             if (!sidebar.contains(e.target as Node)) handleClose();
@@ -45,9 +46,8 @@ export function Header({toggleMode}: {toggleMode: () => void}) {
                             <ul className="flex gap-4">
                                 <li><a href="#about-me" className="text-body-2-all font-medium text-grey-light-600 dark:text-grey-dark-600 hover:text-grey-light-800 dark:hover:text-grey-dark-800">About</a></li>
                                 <li><a href="#skills" className="text-body-2-all font-medium text-grey-light-600 dark:text-grey-dark-600 hover:text-grey-light-800 dark:hover:text-grey-dark-800">Skills</a></li>
-                                {/* <li><a href="#experience" className="text-body-2-all font-medium text-grey-light-600 dark:text-grey-dark-600 hover:text-grey-light-800 dark:hover:text-grey-dark-800">Exprience</a></li> */}
-                                <li><a href="#work" className="text-body-2-all font-medium text-grey-light-600 dark:text-grey-dark-600 hover:text-grey-light-800 dark:hover:text-grey-dark-800">Work</a></li>
-                                {/* <li><a href="#testimonials" className="text-body-2-all font-medium text-grey-light-600 dark:text-grey-dark-600 hover:text-grey-light-800 dark:hover:text-grey-dark-800">Testimonials</a></li> */}
+                                <li><a href="#experience" className="text-body-2-all font-medium text-grey-light-600 dark:text-grey-dark-600 hover:text-grey-light-800 dark:hover:text-grey-dark-800">Experience</a></li>
+                                <li><a href="#work" className="text-body-2-all font-medium text-grey-light-600 dark:text-grey-dark-600 hover:text-grey-light-800 dark:hover:text-grey-dark-800">Projects</a></li>
                                 <li><a href="#contact" className="text-body-2-all font-medium text-grey-light-600 dark:text-grey-dark-600 hover:text-grey-light-800 dark:hover:text-grey-dark-800">Contact</a></li>
                             </ul>
                         </nav>
@@ -56,7 +56,7 @@ export function Header({toggleMode}: {toggleMode: () => void}) {
                             <button type="button" onClick={toggleMode}>
                                 <img src={mode === 'dark' ? sunIcon : moonIcon} alt="" />
                             </button>
-                            <a href="/resume/Ibrahim Abdullahi-Idiagbon Full-stack Resume.pdf" download={true} className="hover:bg-grey-dark-200 dark:hover:bg-grey-light-200 transition-all ease-linear px-4 py-[6px] bg-grey-light-900 dark:bg-grey-dark-900 text-grey-light-50 dark:text-grey-dark-50 text-body-2-all text-center whitespace-nowrap rounded-xl">Download CV</a>
+                            <ResumeDropdown />
                         </div>
                     </div>
                 </div>
@@ -89,9 +89,8 @@ function Sidebar({toggleMode, animation, setAnimation, handleClose}: {toggleMode
                     <ul className="p-4 flex flex-col gap-4 border-b border-b-grey-light-100 dark:border-b-grey-dark-100">
                         <li><a href="#about-me" onClick={handleClose} className="text-body-2-all font-medium text-grey-light-600 dark:text-grey-dark-600 hover:text-grey-light-800 dark:hover:text-grey-dark-800">About</a></li>
                         <li><a href="#skills" onClick={handleClose} className="text-body-2-all font-medium text-grey-light-600 dark:text-grey-dark-600 hover:text-grey-light-800 dark:hover:text-grey-dark-800">Skills</a></li>
-                        {/* <li><a href="#experience" onClick={handleClose} className="text-body-2-all font-medium text-grey-light-600 dark:text-grey-dark-600 hover:text-grey-light-800 dark:hover:text-grey-dark-800">Exprience</a></li> */}
-                        <li><a href="#work" onClick={handleClose} className="text-body-2-all font-medium text-grey-light-600 dark:text-grey-dark-600 hover:text-grey-light-800 dark:hover:text-grey-dark-800">Work</a></li>
-                        {/* <li><a href="#testimonials" onClick={handleClose} className="text-body-2-all font-medium text-grey-light-600 dark:text-grey-dark-600 hover:text-grey-light-800 dark:hover:text-grey-dark-800">Testimonials</a></li> */}
+                        <li><a href="#experience" onClick={handleClose} className="text-body-2-all font-medium text-grey-light-600 dark:text-grey-dark-600 hover:text-grey-light-800 dark:hover:text-grey-dark-800">Experience</a></li>
+                        <li><a href="#work" onClick={handleClose} className="text-body-2-all font-medium text-grey-light-600 dark:text-grey-dark-600 hover:text-grey-light-800 dark:hover:text-grey-dark-800">Projects</a></li>
                         <li><a href="#contact" onClick={handleClose} className="text-body-2-all font-medium text-grey-light-600 dark:text-grey-dark-600 hover:text-grey-light-800 dark:hover:text-grey-dark-800">Contact</a></li>
                     </ul>
                 </nav>
@@ -102,7 +101,18 @@ function Sidebar({toggleMode, animation, setAnimation, handleClose}: {toggleMode
                             <img src={mode === 'dark' ? sunIcon : moonIcon} alt="" />
                         </button>
                     </div>
-                    <a href="/resume/Ibrahim Abdullahi-Idiagbon Full-stack Resume.pdf" download={true} className="hover:bg-grey-dark-200 dark:hover:bg-grey-light-200 transition-all ease-linear px-4 py-[6px] bg-grey-light-900 dark:bg-grey-dark-900 text-grey-light-50 dark:text-grey-dark-50 text-body-2-all rounded-xl whitespace-nowrap text-center">Download CV</a>
+                    <div className="flex flex-col gap-2">
+                        {resumes.map(r => (
+                            <a
+                                key={r.variant}
+                                href={`/resume/${r.filename}`}
+                                download
+                                className="hover:bg-grey-dark-200 dark:hover:bg-grey-light-200 transition-all ease-linear px-4 py-[6px] bg-grey-light-900 dark:bg-grey-dark-900 text-grey-light-50 dark:text-grey-dark-50 text-body-3-all rounded-xl whitespace-nowrap text-center"
+                            >
+                                {r.label} CV
+                            </a>
+                        ))}
+                    </div>
                 </div>
             </div>
         </div>
