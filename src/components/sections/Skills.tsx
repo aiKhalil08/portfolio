@@ -10,7 +10,7 @@ const categoryLabels: Record<SkillCategory, string> = {
     framework: 'Frameworks & Libraries',
     database: 'Databases',
     tool: 'Tools & Platforms',
-    other: 'Other',
+    other: 'Others',
 };
 
 const categoryOrder: SkillCategory[] = ['language', 'framework', 'database', 'tool', 'other'];
