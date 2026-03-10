@@ -68,7 +68,7 @@ export const projects: ProjectType[] = [
 
     // Freelance Projects
     {
-        title: 'Healthify',
+        title: 'Dream Glow',
         description: 'Health tracking mobile app with OCR-powered lab report analysis, daily reminders, weekly check-ins, and Google Health Connect integration for cross-app data sync.',
         imageUrl: '/images/projects/healthify.png',
         technologies: ['React Native', 'NestJS', 'PostgreSQL', 'Firebase'],
