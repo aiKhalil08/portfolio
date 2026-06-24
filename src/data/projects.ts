@@ -68,6 +68,24 @@ export const projects: ProjectType[] = [
 
     // Freelance Projects
     {
+        title: 'Genetree',
+        description: 'Marketing website for Genetree, a South African software engineering company that builds custom software, mobile apps, web platforms, and SaaS solutions — featuring services, industries, portfolio, and project-inquiry sections.',
+        imageUrl: '/images/projects/genetree.png',
+        technologies: ['Next.js', 'Claude Code', 'Figma MCP', 'FormSubmit'],
+        domains: ['frontend'],
+        context: 'freelance',
+        livePreview: 'https://www.genetreegroup.com/',
+    },
+    {
+        title: 'CREO MRC',
+        description: 'Marketing website for CREO MRC, a South African company offering building, renovation, maintenance, electrical, plumbing, and infrastructure services, showcasing their offerings with an integrated quote-request form.',
+        imageUrl: '/images/projects/creomrc.png',
+        technologies: ['React', 'Claude Code', 'Figma MCP', 'Web3Forms'],
+        domains: ['frontend'],
+        context: 'freelance',
+        livePreview: 'https://www.creomrc.com/',
+    },
+    {
         title: 'Dream Glow',
         description: 'Health tracking mobile app with OCR-powered lab report analysis, daily reminders, weekly check-ins, and Google Health Connect integration for cross-app data sync.',
         imageUrl: '/images/projects/healthify.png',
